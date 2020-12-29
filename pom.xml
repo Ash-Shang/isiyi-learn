@@ -38,6 +38,7 @@
         <module>isiyi-dp</module>
         <module>isiyi-mybatis</module>
         <module>isiyi-crawl</module>
+        <module>isiyi-hikari</module>
     </modules>
 
 

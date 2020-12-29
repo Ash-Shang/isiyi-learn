@@ -1,0 +1,46 @@
+server:
+  port: 9001
+
+spring:
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:33061/umbra-crawl?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    hikari:
+      max-pool-size: 200
+      min-idle: 1
+      connection-test-query: select 1
+    type: com.zaxxer.hikari.HikariDataSource
+
+
+mybatis-plus:
+  # 如果是放在src/main/java目录下 classpath:/com/yourpackage/*/mapper/*Mapper.xml
+  # 如果是放在resource目录 classpath:/mapper/*Mapper.xml
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.isiyi.hikari.domain
+  #type-enums-package: com.example.*.enums,com.example.rbac.enums.*.*,com.example.*.enums.*
+  global-config:
+    refresh:  true
+    db-config:
+      id-type: auto
+      #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+      field-strategy: ignored
+      #mp2.3+ 全局表前缀 mp_
+      #table-prefix: zss_
+      #数据库大写下划线转换
+      capital-mode: true
+      #逻辑删除配置（下面3个配置）
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      db-type: mysql
+    #自定义填充策略接口实现
+    #meta-object-handler: com.baomidou.springboot.MyMetaObjectHandler
+  configuration:
+    #配置返回数据库(column下划线命名&&返回java实体是驼峰命名)，自动匹配无需as（没开启这个，SQL需要写as： select user_id as userId）
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    #配置JdbcTypeForNull, oracle数据库必须配置
+    jdbc-type-for-null: 'null'
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
