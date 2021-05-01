@@ -41,7 +41,26 @@
         <module>isiyi-crawl</module>
         <module>isiyi-hikari</module>
         <module>isiyi-pattern</module>
+        <module>isiyi-netty</module>
     </modules>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <classpathScope>test</classpathScope>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
