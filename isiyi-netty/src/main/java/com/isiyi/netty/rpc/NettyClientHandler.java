@@ -4,6 +4,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
 import java.util.concurrent.Callable;
+import java.util.regex.Pattern;
 
 /**
  * 类描述
@@ -58,4 +59,5 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter implements 
         System.out.println(" setPara  ");
         this.para = para;
     }
+
 }
