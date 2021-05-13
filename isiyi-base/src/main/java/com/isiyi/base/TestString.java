@@ -3,6 +3,7 @@ package com.isiyi.base;
 import org.junit.Test;
 
 import java.util.HashSet;
+import java.util.IdentityHashMap;
 
 public class TestString {
 
@@ -35,4 +36,13 @@ public class TestString {
         System.out.println("我爱你中国");
     }
 
+    @Test
+    public void testBan(){
+        int idx = 0;
+        int len = 10;
+        while (idx < len) {
+            idx += 2;
+            System.out.println(idx);
+        }
+    }
 }
