@@ -43,5 +43,8 @@
         <module>isiyi-pattern</module>
         <module>isiyi-netty</module>
         <module>isiyi-printer</module>
+        <module>isiyi-spring</module>
+        <module>isiyi-hadoop</module>
+        <module>isiyi-scala</module>
     </modules>
 </project>
