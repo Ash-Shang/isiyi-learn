@@ -46,5 +46,6 @@
         <module>isiyi-spring</module>
         <module>isiyi-hadoop</module>
         <module>isiyi-scala</module>
+        <module>isiyi-spark</module>
     </modules>
 </project>

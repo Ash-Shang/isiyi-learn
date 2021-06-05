@@ -7,7 +7,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.isiyi.printer.constant.PrinterConstant;
 import com.isiyi.printer.params.*;
 import com.isiyi.printer.template.TicketTestTemplateConstant;
-import com.sun.org.apache.regexp.internal.RE;
+
 
 import java.io.IOException;
 import java.io.OutputStream;
