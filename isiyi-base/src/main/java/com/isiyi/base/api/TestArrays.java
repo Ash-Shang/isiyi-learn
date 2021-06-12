@@ -1,14 +1,13 @@
 package com.isiyi.base.api;
 
-import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class TestArrays {
 
-    @Test
-    public void test01(){
+//    @Test
+//    public void test01(){
 
 //        Integer[] myInt = {1,2,3};
 //        List<Integer> integers = Arrays.asList(myInt);
@@ -19,7 +18,7 @@ public class TestArrays {
 
 
 
-    }
+//    }
 
 
 }

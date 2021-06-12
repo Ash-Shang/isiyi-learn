@@ -1,21 +1,11 @@
 package com.isiyi.java.flink.excutor;
 
 import com.isiyi.java.flink.domain.Tokenizer;
-import com.isiyi.java.flink.domain.WordCountDomain;
-import com.sun.xml.internal.messaging.saaj.packaging.mime.internet.HeaderTokenizer;
-import org.apache.flink.api.common.functions.FlatMapFunction;
-import org.apache.flink.api.common.functions.ReduceFunction;
 import org.apache.flink.api.java.DataSet;
 import org.apache.flink.api.java.ExecutionEnvironment;
-import org.apache.flink.api.java.operators.AggregateOperator;
 import org.apache.flink.api.java.operators.DataSource;
 import org.apache.flink.api.java.tuple.Tuple2;
-import org.apache.flink.api.java.utils.ParameterTool;
-import org.apache.flink.streaming.api.datastream.DataStream;
-import org.apache.flink.streaming.api.datastream.DataStreamSource;
-import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-import org.apache.flink.streaming.api.windowing.time.Time;
-import org.apache.flink.util.Collector;
+
 
 /**
  * 统计一个文件的单词出现的总次数，并将结果存储到文件中
