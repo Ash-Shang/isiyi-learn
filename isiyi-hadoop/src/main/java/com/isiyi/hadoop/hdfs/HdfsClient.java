@@ -59,7 +59,7 @@ public class HdfsClient {
         FileSystem fs = FileSystem.get(new URI(HDFS_URI), configuration, PERMISSION_USER);
 
         // 2 上传文件
-        fs.copyFromLocalFile(new Path("E:/appdata/wordcount.txt"), new Path("/test/cdh03/wordcount.txt"));
+        fs.copyFromLocalFile(new Path("E:/appdata/emp_gender.txt"), new Path("/test/cdh01/emp_gender.txt"));
 
         // 3 关闭资源
         fs.close();
