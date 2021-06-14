@@ -20,8 +20,8 @@ public class WordCountBatchExecutor {
 
     public static void main(String[] args) throws Exception {
 
-        String input = "";
-        String output = "";
+        String input = "E:\\appdata\\wordcount.txt";
+        String output = "E:\\appdata\\out\\wordcount_result.txt";
 
         //获取Flink运行环境
         ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
@@ -29,7 +29,7 @@ public class WordCountBatchExecutor {
 
         DataSet<Tuple2<String, Integer>> counts = textFile.flatMap(new Tokenizer()).groupBy(0).sum(1);
 
-        counts.writeAsCsv(output, "\n", " ").setParallelism(1);
+        counts.writeAsCsv(output, "\n", "\t").setParallelism(1);
 
         env.execute("执行了、、、、");
     }

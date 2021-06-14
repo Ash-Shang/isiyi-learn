@@ -16,7 +16,7 @@ public class Tokenizer implements FlatMapFunction<String, Tuple2<String, Integer
     @Override
     public void flatMap(String value, Collector<Tuple2<String, Integer>> collector) throws Exception {
 
-        String[] tokens = value.toLowerCase().split("\\W++");
+        String[] tokens = value.toLowerCase().split("\t");
         for (String token : tokens) {
 
             if (token.length() > 0) {

@@ -35,7 +35,7 @@ public class WordCountStreamExecutor {
         }
         //获取Flink运行环境
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-        String hostName = "hadoop100";
+        String hostName = "127.0.0.1";
         String delimiter = "\n";
         //连接socket获取输入数据
         DataStreamSource<String> textStream = env.socketTextStream(hostName, port, delimiter);
