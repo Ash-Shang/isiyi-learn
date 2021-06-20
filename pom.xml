@@ -48,5 +48,6 @@
         <module>isiyi-scala</module>
         <module>isiyi-spark</module>
         <module>isiyi-flink</module>
+        <module>isiyi-shells</module>
     </modules>
 </project>
