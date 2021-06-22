@@ -1,6 +1,7 @@
 package com.isiyi.java.flink.ts;
 
 import org.apache.flink.api.java.ExecutionEnvironment;
+import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.junit.Test;
 
 /**
@@ -16,9 +17,13 @@ public class MainTest {
 
     @Test
     public void main() throws Exception {
-        ExecutionEnvironment environment = ExecutionEnvironment.getExecutionEnvironment();
+       // ExecutionEnvironment environment = ExecutionEnvironment.getExecutionEnvironment();
        // TsOperatorTest.mapFunction(environment);
-        TsOperatorTest.firstFunction(environment);
+        //TsOperatorTest.firstFunction(environment);
+        StreamExecutionEnvironment environment = StreamExecutionEnvironment.getExecutionEnvironment();
+        //StreamOperatorTest.filterFunction(environment);
+        StreamOperatorTest.unionFunction(environment);
+        environment.execute("");
     }
 
 }
