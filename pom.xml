@@ -49,5 +49,6 @@
         <module>isiyi-spark</module>
         <module>isiyi-flink</module>
         <module>isiyi-shells</module>
+        <module>isiyi-canal</module>
     </modules>
 </project>
